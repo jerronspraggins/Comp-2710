@@ -6,7 +6,7 @@
 // Filename: Project2.cpp
 // How to compile: I used Visual Studio Code on my Mac computer and ran it with the terminal.
 //
-
+#include <windows.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -201,4 +201,8 @@ member menu::returnmember(string nameIn, string passIn, vector <member> database
         }
     }
     return retrieve;
+}
+
+int main(){
+    return 0;   
 }
