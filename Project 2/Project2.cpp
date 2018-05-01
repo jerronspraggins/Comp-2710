@@ -56,19 +56,32 @@ public:
 class member {
 public: 
     member();
-
     string name;
     string password;
-    void setMemberName(string);
-    void setpassword(string);
+    int verify = 0;
+    void setMemberName(string nameIn){
+        name = nameIn;
+    }
+    void setpassword(string passwordIn){
+        password = passwordIn;
+    }
     void addclient(string, string, int, string, int, vector <client>);
     void changepass(member, vector <member>&);
-    string getmembername();
-    string getpass();
-    int getverify();
-    void setverify(int);
+    string getmembername(){
+        return name;
+    }
+    string getpass(){
+        return password;
+    }
+    int getverify(){
+        return verify;
+    }
+    void setverify(int verifyIn){
+        verify = verifyIn;
+    }
+        
 
-    int verify = 0;
+    
 };
 
 
@@ -184,7 +197,7 @@ bool menu::authenticate(string nameIn, string passIn, vector <member> database) 
     return valid;
 }
 
-void menu::showlogin() {
+void menu::showLogin() {
     cout << "\t===========================================================\n";
     cout << "\t| Login to Access the Teller Terminal System         |\n";
     cout << "\t===========================================================\n";
